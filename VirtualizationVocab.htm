@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+<HTML>
+	<HEAD>
+		<TITLE>Basic Virtualization Vocabulary</TITLE>
+		<META http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+		<SCRIPT language="JavaScript">
+var intkVocab = 10;
+var intkAnswers = 0;
+var intkMGQ = 0;
+
+var intQ = new Array(intkVocab);
+
+var strWord = new Array(intkVocab);
+strWord[0] = "Operating System";
+strWord[1] = "Host OS";
+strWord[2] = "Guest OS";
+strWord[3] = "VirtualBox";
+strWord[4] = "Hardware-assisted Virtualization";
+strWord[5] = "Random Access Memory";
+strWord[6] = "Storage";
+strWord[7] = "Dynamic Storage";
+strWord[8] = "Motherboard";
+strWord[9] = "Processor";
+
+
+var strDef = new Array(intkVocab);
+strDef[0] = "The interface between the user and the computer. This also works as the interface between a sotware application and the computer.";
+strDef[1] = "The underlying hardware computer. It has parts you can actually touch such as the case and a physical on-off switch. This runs all the software on the computer including the virtualization software.";
+strDef[2] = "A computer that exists in software only, also known as a virtual computer. ";
+strDef[3] = "Virtualization sfotware intended to run on a hardware computer. Can be downloaded free for personal use from Oracle.";
+strDef[4] = "The hardware computer is designed to simulate the hardware for a virtual computer. Known as Intel VT-x or AMD-V.";
+strDef[5] = "The memory in a computer that gets erased when you turn the computer off. This memory must be greater than the minimum memory required by the hardware computer added to the memory assigned to the virtual computer. ";
+strDef[6] = "Saves your data in memory for you when you turn your computer off. The data is saved on a hard disk.";
+strDef[7] = "Increases the storage size of your virtual computer on your hardware computer only as additional files are added. This saves room on the hard disk of your hardware computer.";
+strDef[8] = "Main part of a computer onto which all of the other parts are connected or attached to.";
+strDef[9] = "Part of a computer where the calculations or decisions are carried out.";
+
+
+
+
+var intC = 0;
+function writeListBox(){
+	var k = 0;
+
+	document.write('<SELECT id = lbxVocabQ' + intC + ' name = lbxVocabQ' + intC++ + '>');
+	document.write('<FONT face=Arial size=2>');
+	for (k = 0; k<intkVocab; k++ ){
+		document.write('<OPTION value = "' + k + '">' + strWord[k] + '</OPTION>');
+	}
+	document.write('</font>');
+	document.write('</SELECT');
+}
+
+var intQChoice = new Array(intkVocab);
+for (i = 0; i < intkVocab; i++){
+	intQChoice[i] = 1;
+}
+
+
+
+i = 0;
+
+function getScore(objForm ){
+	var intScore = 0;
+	var intTotal = 10;
+	var objF = objForm;
+
+	var k = 0;
+	if (objF.lbxVocabQ0.options[objF.lbxVocabQ0.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	if (objF.lbxVocabQ1.options[objF.lbxVocabQ1.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ2.options[objF.lbxVocabQ2.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ3.options[objF.lbxVocabQ3.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ4.options[objF.lbxVocabQ4.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ5.options[objF.lbxVocabQ5.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ6.options[objF.lbxVocabQ6.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ7.options[objF.lbxVocabQ7.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ8.options[objF.lbxVocabQ8.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+	if (objF.lbxVocabQ9.options[objF.lbxVocabQ9.options.selectedIndex].text == strWord[intQ[k++]]){
+		intScore++;	
+	}
+	
+
+		
+	alert( objF.Name.value + "-   " + "Your score is: " + (intScore/intTotal)*100 + "% for the " + document.title + " assignment.");
+	
+	document.location.reload();
+return false;
+}
+		</SCRIPT>
+		<META content="MSHTML 5.50.4522.1800" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P align="center"><EM><FONT face="Arial" size="5"><STRONG>Basic Virtualization Vocabulary Exercise</STRONG></FONT></EM></P>
+		<FORM name="Score" onsubmit="return getScore(this)" action="VirtualizationxVocab.htm">
+			<P align="left"><FONT face="Arial" size="4"><STRONG><INPUT id="Name" value="Enter Name Here" name="Name"/>&nbsp;&nbsp; 
+					</STRONG>(fyi no data is being stored)</FONT>
+			</P>
+			<P align="center"><FONT face="Arial" size="4"><EM>Vocabulary</EM></FONT></P>
+			<P align="left"><FONT face="Arial" size="2"><EM><STRONG>For each Drop Down Box on the left 
+							please choose the best match on the right. </STRONG></EM></FONT>
+			</P>
+			<DIV align="center">
+				<TABLE>
+					<TBODY>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					i = Math.round((intkVocab-1) * Math.random());
+					intQChoice[i] = 0;
+					intQ[0] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[1] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[2] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[3] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[4] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[5] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[6] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[7] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[8] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+						<TR>
+							<TD>
+								<SCRIPT language="JavaScript">
+			writeListBox();
+								</SCRIPT>
+							</TD>
+							<TD align="left"><STRONG><FONT face="Arial" size="2">
+										<SCRIPT language="JavaSCript">
+					while (intQChoice[i] == 0){
+						i = Math.round((intkVocab-1) * Math.random());
+					}
+					intQChoice[i] = 0;
+					intQ[9] = i;
+					document.write(strDef[i]);
+										</SCRIPT>
+									</FONT></STRONG>
+							</TD>
+						</TR>
+					</TBODY></TABLE>
+			</DIV>
+			<P><INPUT id="submit1" type="submit" value="Get Score" name="submit1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<INPUT id="reset1" type="reset" value="Reset To Original Page" name="reset1"></P>
+		</FORM>
+		<DIV></DIV>
+	</BODY>
+</HTML>
